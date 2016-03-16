@@ -2,13 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <title>Starter MEAN Single Page Application</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>DPEC</title>
 
 </head>
-<body>
-
-    we did it!
+<body ng-app="dpecApp">
+<div ui-view=""></div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="bower_components/lodash/dist/lodash.min.js"></script>
+	<script src="bower_components/restangular/dist/restangular.min.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controller/landing.js"></script>
+	<script src="scripts/controller/course.js"></script>
+	<script src="scripts/controller/showCourse.js"></script>
 
 </body>
 </html>
