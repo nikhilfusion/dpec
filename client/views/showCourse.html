@@ -1,3 +1,7 @@
 <div class="container slider">
-    <img ng-repeat="slide in images" class="slide" ng-src="{{slide.image}}"></img>
+    <img ng-src="{{images[index].image}}" style="width:100px;height:100px;" /> 
 </div>
+
+<button ng-if="nextFlg" ng-click="next()">Next</button>
+<button ng-if="prevFlg" ng-click="prev()">Prev</button>
+

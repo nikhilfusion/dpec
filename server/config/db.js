@@ -1,4 +1,2 @@
-// config/db.js
-    module.exports = {
-        url : 'mongodb://localhost/dpec-db'
-    }
+var db = require('monk')('localhost/dpec-db');
+exports.db = db;    
