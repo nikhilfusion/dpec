@@ -1,0 +1,75 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2e2e2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home-banner {
+  background: url(../images/slider.png) no-repeat;
+  background-position: 0 -400px;
+  height: 500px;
+}
+
+.top-ribbon {
+	background: #ea397f;
+	color: #fff;
+	padding: 10px 20px;
+}
+
+.top-ribbon span:first-child {
+	margin: 0 10px 0 0;
+}
+
+.top-ribbon span i {
+	margin: 0 5px 0 0;
+}
+
+.my-login .form-control {
+    margin: 0 0 10px;
+}
+
+.ladyimg img{
+	height: 460px;
+}
+
+.my-login {
+	background: rgba(255, 255, 255, 0.5);
+	padding: 15px 15px 30px;
+	margin: 50px 0 0;
+}
+
+.past-info {
+	background: #fcfbfd;
+	padding: 20px;
+}
+
+.countbox-number {
+	border: solid 3px #fff;
+	padding: 20px 0;
+}
+
+.countbox-number .glyphicon, .countbox-number h3{
+	color: #EA397F;
+}
+
+.countbox-number .glyphicon {
+	font-size: 50px;
+}
+
+.contact {
+	padding: 40px 0;
+}
+
+.contact .glyphicon {
+	font-size: 39px;
+	color: #EA397F;
+}
+
+.contact p, .contact i {
+	color: #777;
+	margin: 0;
+}
