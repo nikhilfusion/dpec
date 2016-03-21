@@ -8,8 +8,8 @@ app.controller('showCourseController', ['$scope', function($scope) {
         {image: '../assets/images/5.jpg', description: 'Image 04'},
         {image: '../assets/images/6.jpg', description: 'Image 05'},
         {image: '../assets/images/7.jpg', description: 'Image 06'}
-    ];
-
+    ];   
+    
     $scope.index = 0;
     $scope.nextFlg = true;
     $scope.prevFlg = false;

@@ -10,7 +10,7 @@ var express        = require('express'),
 // configuration ===========================================
     
 // config files
-var db = require('./server/config/db');
+//var db = require('./server/config/db');
 
 // set our port
 var port = process.env.PORT || 8000; 
