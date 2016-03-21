@@ -60,7 +60,7 @@ body {
 	font-size: 50px;
 }
 
-.contact {
+.contact , .team-member {
 	padding: 40px 0;
 }
 
@@ -72,4 +72,8 @@ body {
 .contact p, .contact i {
 	color: #777;
 	margin: 0;
+}
+
+.team-member .team-member-content {
+	padding: 20px 0 0;
 }
