@@ -23,11 +23,21 @@ app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider', funct
     	.state('courses', {
     		url : '/courses',
     		controller : 'courseController',
-    		templateUrl : 'views/courses.html'
+    		templateUrl : 'views/user/courses.html'
     	})
     	.state('showCourse', {
     		url : '/couses/:courseId',
     		controller : 'showCourseController',
-    		templateUrl : 'views/showCourse.html'
+    		templateUrl : 'views/user/showCourse.html'
+    	})
+        .state('admin', {
+    		url : '/admin/home',
+    		controller : 'adminController',
+    		templateUrl : 'views/admin/admin.html'
+    	})
+        .state('physio', {
+    		url : 'physio/home',
+    		controller : 'physioController',
+    		templateUrl : 'views/physio/home.html'
     	})
 }]); 
