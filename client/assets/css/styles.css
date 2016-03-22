@@ -44,7 +44,7 @@ body {
 
 .past-info {
 	background: #fcfbfd;
-	padding: 20px;
+	padding: 20px 0;
 }
 
 .countbox-number {
@@ -60,7 +60,7 @@ body {
 	font-size: 50px;
 }
 
-.contact , .team-member {
+.section-padding {
 	padding: 40px 0;
 }
 
