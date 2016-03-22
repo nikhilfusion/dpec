@@ -10,7 +10,9 @@
 var app = angular.module('dpecApp',[
 	'ui.router',
 	'restangular',
-	'ngAnimate'
+	'ngAnimate',
+    'ngCookies',
+    'ui.bootstrap'
 ]);
 app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider', function($stateProvider, $urlRouterProvider, RestangularProvider){
 	$urlRouterProvider.otherwise("/");
@@ -26,7 +28,7 @@ app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider', funct
     		templateUrl : 'views/user/courses.html'
     	})
     	.state('showCourse', {
-    		url : '/couses/:courseId',
+    		url : '/courses/:courseId',
     		controller : 'showCourseController',
     		templateUrl : 'views/user/showCourse.html'
     	})
@@ -36,8 +38,13 @@ app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider', funct
     		templateUrl : 'views/admin/admin.html'
     	})
         .state('physio', {
-    		url : 'physio/home',
+    		url : '/physio/home',
     		controller : 'physioController',
     		templateUrl : 'views/physio/home.html'
+    	})
+        .state('profile', {
+    		url : '/profile',
+    		controller : 'profileController',
+    		templateUrl : 'views/profile.html'
     	})
 }]); 
