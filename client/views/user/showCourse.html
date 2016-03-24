@@ -34,9 +34,10 @@
 			<div class="slider">
 			    <img ng-src="{{images[index].image}}" /> 
 			</div>
+            {{index}}
 			<div class="pull-right btn-wrap">
-				<button ng-if="prevFlg" ng-click="prev()" class="btn btn-primary">Prev</button>
-				<button ng-if="nextFlg" ng-click="next()" class="btn btn-primary">Next</button>
+				<button ng-if="index > 0 && index <= images.length" ng-click="prev()" class="btn btn-primary">Prev</button>
+				<button ng-if="index < images.length &&  " ng-click="next()" class="btn btn-primary">Next</button>
 			</div>
 		</div>
 	</div>
