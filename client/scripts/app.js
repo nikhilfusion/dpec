@@ -14,7 +14,7 @@ var app = angular.module('dpecApp',[
     'ngCookies',
     'ui.bootstrap'
 ]);
-app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider', function($stateProvider, $urlRouterProvider, RestangularProvider){
+app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider','$locationProvider', function($stateProvider, $urlRouterProvider, RestangularProvider, $locationProvider){
 	$urlRouterProvider.otherwise("/");
 	$stateProvider
       .state('home', {
@@ -32,6 +32,11 @@ app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider', funct
     		controller : 'showCourseController',
     		templateUrl : 'views/user/showCourse.html'
     	})
+        .state('showVideo', {
+            url : '/video/:courseId',
+            controller : 'showCourseController',
+            templateUrl : 'views/user/showVideo.html'
+        })
         .state('admin', {
     		url : '/admin/home',
     		controller : 'adminController',
@@ -42,9 +47,22 @@ app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider', funct
     		controller : 'physioController',
     		templateUrl : 'views/physio/home.html'
     	})
+        .state('physioCourse', {
+            url : 'physio/course',
+            controller : 'physioController',
+            templateUrl : 'views/physio/courses.html'
+        })
         .state('profile', {
     		url : '/profile',
     		controller : 'profileController',
     		templateUrl : 'views/profile.html'
     	})
+        .state('createUser', {
+            url : '/createUser',
+            controller : 'createUserController',
+            templateUrl : 'views/physio/createUser.html'
+        });
+        // $locationProvider.html5Mode({
+        //     enabled: true
+        // });
 }]); 

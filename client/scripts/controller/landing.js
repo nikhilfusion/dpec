@@ -2,11 +2,12 @@ app.controller('landingController', ['$scope', 'userService', '$location', 'cook
  function($scope, userService, $location, cookieService) {
 	$scope.submit = function(loginDtls) {
         var userDtls = userService.user;
+        var loginflg = false;
         angular.forEach(userDtls, function(val, key) {
             if(val.user === loginDtls.userName) {
-                if(val.password = loginDtls.password) {
+                if(val.password === loginDtls.password) {
                     cookieService.setCookie(val);
-                    console.log(cookieService.getCookie)
+                    loginflg = true;
                     switch(val.role) {
                         case 'user'   :  $location.path('/courses');
                                          break;
@@ -17,6 +18,9 @@ app.controller('landingController', ['$scope', 'userService', '$location', 'cook
                     }
                 }
             }
-        }) 
+        })
+        if(!loginflg) {
+            $scope.loginFail = true;
+        } 
     }
 }]);

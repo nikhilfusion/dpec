@@ -1,41 +1,51 @@
-app.controller('showCourseController', ['$scope', function($scope) {
-	console.log("showCourseController");
-    $scope.images = [
-        {image: '../assets/images/1.jpg', description: 'Image 00'},
-        {image: '../assets/images/2.jpg', description: 'Image 01'},
-        {image: '../assets/images/3.jpg', description: 'Image 02'},
-        {image: '../assets/images/4.jpg', description: 'Image 03'},
-        {image: '../assets/images/5.jpg', description: 'Image 04'},
-        {image: '../assets/images/6.jpg', description: 'Image 05'},
-        {image: '../assets/images/7.jpg', description: 'Image 06'}
-    ];   
-    
+app.controller('showCourseController', ['$scope', 'commonData', 'cookieService', function($scope, commonData, cookieService) {
+    $scope.userDtls = cookieService.getCookie();
+    $scope.courseInfo = commonData.sessions; 
+    $scope.commentflg = false;
     $scope.index = 0;
     $scope.nextFlg = true;
     $scope.prevFlg = false;
+    var commentArray = [];
     $scope.next = function() {
         $scope.index++;
-        // console.log("$scope.index", $scope.index);
-        // if($scope.index === $scope.images.length - 1) {
-        //         $scope.nextFlg = false;
-        // } else {
-        //     $scope.prevFlg = true;
-        //     $scope.index++;
-        //     if($scope.index === $scope.images.length - 1) {
-        //         $scope.nextFlg = false;
-        //     }
-        // }
+        if($scope.index < $scope.courseInfo.length - 1 && $scope.index >=0) {
+            $scope.nextFlg = true;
+        } else {
+            $scope.nextFlg = false;
+        }
+        if($scope.index >=1 && $scope.index < $scope.courseInfo.length) {
+            $scope.prevFlg = true;
+        } else {
+            $scope.prevFlg = false;
+        }
     };
     $scope.prev = function() {
         $scope.index--;
-        // if($scope.index === 0) {
-        //     $scope.prevFlg = false;
-        // } else {
-        //     $scope.index--;
-        //     if($scope.index === 0) {
-        //         $scope.prevFlg = false;
-        //         $scope.nextFlg = true;
-        //     }
-        // }
+        if($scope.index >=1 && $scope.index < $scope.courseInfo.length) {
+            $scope.prevFlg = true;
+        } else {
+            $scope.prevFlg = false;
+        }
+        if($scope.index < $scope.courseInfo.length - 1 && $scope.index >=0) {
+            $scope.nextFlg = true;
+        } else {
+            $scope.nextFlg = false;
+        }
+    };
+    $scope.displayComment = function() {
+        $scope.commentflg = true;
+    };
+    
+    $scope.enterComment = function(cmnt, courseDtls) {
+        commentArray.push(cmnt);
+        $scope.comment = "";
+        $scope.commentArray = commentArray;
+        var cookieData = {
+            "therapistId" : courseDtls.therapistId,
+            "comment" : cmnt,
+            "userId"  : $scope.userDtls.id,
+            "courseId": courseDtls.courseId
+        };
+        cookieService.setComment(cookieData);
     }
 }]);

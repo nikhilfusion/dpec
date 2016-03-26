@@ -108,3 +108,46 @@ body {
 .profile-pg .form-control {
 	margin: 0 0 10px;
 }
+
+.demo-content{
+    padding: 15px;
+    font-size: 18px;
+    min-height: 85px;
+    background: #dbdfe5;
+    margin-bottom: 10px;
+    margin-top: 10px; 
+}
+
+.commentarea .textarea {
+	width: 100%;
+	resize:none;
+}
+
+.btn-comment {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.anchor-comment {
+	cursor:pointer;
+	margin-top: 20px;
+}
+
+.span_error {
+    color:red;
+    display:block;
+}
+
+.panel-green {
+	border-color: #2ecc71;
+}
+
+.margin-panel {
+	margin: 40px auto;
+    width: 50%;
+}
+
+.panel-heading {
+  background: #2ecc71;
+    color: #fff;  
+} 

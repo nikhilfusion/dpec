@@ -1,46 +1,30 @@
-<nav class="navbar navbar-inverse" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Physiotherapy</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-</nav>
+<div ng-include="'../views/commonHeader.html'" ></div>
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="slider">
-			    <img ng-src="{{images[index].image}}" /> 
+			    <img ng-src="{{courseInfo[index].slide}}" /> 
 			</div>
-            {{index}}
+            <div class="pull-left">
+                <a ng-click="displayComment()" class="anchor-comment">comment</a>
+            </div>
 			<div class="pull-right btn-wrap">
-				<button ng-if="index > 0 && index <= images.length" ng-click="prev()" class="btn btn-primary">Prev</button>
-				<button ng-if="index < images.length &&  " ng-click="next()" class="btn btn-primary">Next</button>
+				<button ng-if="prevFlg" ng-click="prev()" class="btn btn-primary">Prev</button>
+				<button ng-if="nextFlg" ng-click="next()" class="btn btn-primary">Next</button>
 			</div>
 		</div>
 	</div>
+    <div class="row" ng-if="commentflg">
+        <div class="col-xs-12">
+            <div class="demo-content">
+                <div class="col-xs-12" ng-repeat="cmt in commentArray track by $index" ng-if="commentArray.length > 0">
+                    <span>@{{userDtls.user}} : {{cmt}}</span>
+                </div>
+                <textarea class="col-xs-11" ng-model="comment" placeholder="please enter a comment"></textarea>
+                <button ng-click="enterComment(comment, courseInfo[index]); comment=''" class="btn btn-comment btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
 <!-- Footer -->
     <footer>
         <div class="row">
