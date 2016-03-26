@@ -8,6 +8,10 @@
     "body-parser": "^1.4.3",
     "express": "~4.5.1",
     "method-override": "~2.0.2",
-    "mongoose": "~3.8.0"
+    "mongoose": "~3.8.0",
+    "nodemon": "*"
+  },
+  "engines": {
+      "node": "4.1.1"
   }
 }
