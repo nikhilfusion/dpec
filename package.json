@@ -2,9 +2,10 @@
   "name": "DPEC",
   "main": "server.js",
   "scripts" : {
-      "start": "npm install;cd client; bower install; cd ..; nodemon server.js"
+      "start": "npm install; cd client; bower install; cd ..;node server.js"
   },
   "dependencies": {
+    "bower" : "*",
     "body-parser": "^1.4.3",
     "express": "~4.5.1",
     "method-override": "~2.0.2",
