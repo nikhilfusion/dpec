@@ -1,6 +1,9 @@
 {
   "name": "DPEC",
   "main": "server.js",
+  "scripts" : {
+      "start": "npm install;cd client; bower install; cd ..; node server.js"
+  },
   "dependencies": {
     "body-parser": "^1.4.3",
     "express": "~4.5.1",
