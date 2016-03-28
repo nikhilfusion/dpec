@@ -10,11 +10,13 @@
 				<img src="../assets/images/girl.png" class="img-responsive">
 			</div>
 			<div class="col-md-5 col-sm-5 my-login">
-				<h1 class="text-center">Login</h1>
-				<input type="text" ng-model="user.userName" placeholder="Username" class="form-control">
-				<input type="password" ng-model="user.password" placeholder="Password" class="form-control">
-                <span ng-if="loginFail" class="span_error">*Invalid credentials</span></br>
-				<a ng-click="submit(user)" class="btn btn-success">Login</a>
+				<form name="login" novalidate="">
+					<h1 class="text-center">Login</h1>
+					<input type="text" ng-model="user.userName" placeholder="Username" class="form-control" required>
+					<input type="password" ng-model="user.password" placeholder="Password" class="form-control" required>
+	                <span ng-if="loginFail" class="span_error">*Invalid credentials</span></br>
+					<button type="submit" ng-click="submit(user)" ng-disabled="login.$invalid" class="btn btn-success">Login</a>
+				</form>	
 			</div>
 		</div>
 	</div>

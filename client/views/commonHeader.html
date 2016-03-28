@@ -20,7 +20,10 @@
                        <a href="#/profile">Profile</a> 
                     </li>
                     <li ng-if="cookieData.role == 'physio'">
-                        <a ui-sref="createUser">Create User
+                       <a ui-sref="physioCustomers">User</a> 
+                    </li>
+                    <li ng-if="cookieData.role == 'physio'">
+                        <a ui-sref="createUser">Create User</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav pull-right">

@@ -12,7 +12,8 @@ var app = angular.module('dpecApp',[
 	'restangular',
 	'ngAnimate',
     'ngCookies',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'angularjs-dropdown-multiselect'
 ]);
 app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider','$locationProvider', function($stateProvider, $urlRouterProvider, RestangularProvider, $locationProvider){
 	$urlRouterProvider.otherwise("/");
@@ -48,9 +49,19 @@ app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider','$loca
     		templateUrl : 'views/physio/home.html'
     	})
         .state('physioCourse', {
-            url : 'physio/course',
+            url : '/physio/courses/:courseId',
             controller : 'physioController',
             templateUrl : 'views/physio/courses.html'
+        })
+        .state('physioCustomers', {
+            url : '/physio/users',
+            controller : 'physioCustomersController',
+            templateUrl : 'views/physio/users.html'
+        })
+        .state('physioCustomerDtls', {
+            url : '/physio/users/:userId',
+            controller : 'physioCustomersController',
+            templateUrl : 'views/physio/editUser.html'
         })
         .state('profile', {
     		url : '/profile',

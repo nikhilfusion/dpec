@@ -6,7 +6,7 @@
 			    <img ng-src="{{courseInfo[index].slide}}" /> 
 			</div>
             <div class="pull-left">
-                <a ng-click="displayComment()" class="anchor-comment">comment</a>
+                <a ng-click="displayComment()" class="anchor-comment btn btn-primary">Comment</a>
             </div>
 			<div class="pull-right btn-wrap">
 				<button ng-if="prevFlg" ng-click="prev()" class="btn btn-primary">Prev</button>
@@ -20,7 +20,7 @@
                 <div class="col-xs-12" ng-repeat="cmt in commentArray track by $index" ng-if="commentArray.length > 0">
                     <span>@{{userDtls.user}} : {{cmt}}</span>
                 </div>
-                <textarea class="col-xs-11" ng-model="comment" placeholder="please enter a comment"></textarea>
+                <textarea class="col-xs-11" ng-model="comment" placeholder="Please enter a comment"></textarea>
                 <button ng-click="enterComment(comment, courseInfo[index]); comment=''" class="btn btn-comment btn-primary">Submit</button>
             </div>
         </div>

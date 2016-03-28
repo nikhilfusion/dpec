@@ -1,0 +1,47 @@
+<div ng-include="'../views/commonHeader.html'"></div>
+<div class="container" ng-init="getCustomer()">
+    <div class="row">
+        <form action="" class="navbar-form navbar-right">
+	   		<div class="input-group">
+	       		<input type="Search" ng-model="searchText" placeholder="Search..." class="form-control" />
+       			<div class="input-group-btn">
+           			<button class="btn btn-info">
+           				<span class="glyphicon glyphicon-search"></span>
+           			</button>
+       			</div>
+	   		</div>
+		</form>
+        <table class="table table-inverse">
+			<thead>
+		    	<tr>
+		      		<th></th>
+		      		<th>Username</th>
+		      		<th>PatientId</th>
+		      		<th>email</th>
+		      		<th></th>
+		    	</tr>
+		  	</thead>
+		  	<tbody>
+		    	<tr ng-repeat="customer in customers | filter : searchText" >
+		      		<th>{{$index + 1}}</th>
+		      		<td>{{customer.username}}</td>
+		      		<td>{{customer.patientId}}</td>
+		      		<td>{{customer.email}}</td>
+		      		<td>
+		      			<button type="button" class="btn btn-success" ng-click="editUser(customer)">Edit</button>
+		      		</td>	
+		    	</tr>
+		  	</tbody>
+		</table>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+            <hr>
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+    </footer>
+</div>
