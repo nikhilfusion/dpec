@@ -8,33 +8,21 @@ app.service('userService', function() {
         },
         {
             id : 2,
-            user : 'nisha',
-            role : 'user',
-            password : 'nisha'
-        },
-        {
-            id : 3,
-            user : 'nithin',
+            user : 'sajeesh',
             role : 'admin',
             password : 'admin'
         },
         {
-            id : 4,
-            user : 'nissin',
+            id : 3,
+            user : 'jaison',
             role : 'user',
-            password : 'nissin'
+            password : 'jaison'
         },
         {
-            id : 5,
-            user : 'vishnu',
+            id : 4,
+            user : 'madhuri',
             role : 'physio',
-            password : 'vishnu'
-        },
-        {
-            id : 6,
-            user : 'rachana',
-            role : 'physio',
-            password : 'rachana'
+            password : 'madhuri'
         }
     ];
 })
