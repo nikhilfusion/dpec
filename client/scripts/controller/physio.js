@@ -4,7 +4,7 @@ app.controller('physioController', ['$scope', 'userService', '$location', 'cooki
     	$scope.userDtls = cookieService.getCookie();
 
     	$scope.goCourse = function(courseId) {
-    		$location.path('/physio/course');
-    		//$state.go('physioCourse', {'courseId' : courseId})
+    		//$location.path('/physio/course');
+    		$state.go('physioCourse', {'courseId' : courseId})
     	}
  }])

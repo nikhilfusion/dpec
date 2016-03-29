@@ -191,3 +191,8 @@ a {
 .team-member-avatar img {
     height: 280px;
 }
+
+.header-title {
+    color: white;
+    margin-top: 14px;
+};    
