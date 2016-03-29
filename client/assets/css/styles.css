@@ -170,31 +170,24 @@ a {
 .premiun-package-box {
     margin: 0;
     padding: 10px 20px;
-    .premiun-package-msg {
-        margin: 0;
-        padding: 0;
-        h4 {
-            text-align:center;
-            font-size:14px;
-            color:#999;
-            line-height:1.5
-        }
-    }
-    .premium-msg-return-box {
-        margin: 10px 0;
-        padding: 0;
-        .blue-box-fill {
-            margin: 0;
-            padding: 10px;
-            background-color: #30ABE4;
-            font-size: 20px;
-            color: #fff;
-            border-radius: 5px;
-        }
-    }
 }
 
+.premiun-package-box h4 {
+    text-align:center;
+    font-size:14px;
+    color:#999;
+    line-height:1.5
+}
+        
+.premiun-package-box premiun-package-msg {
+    margin: 0;
+    padding: 0;
+}     
 .modal-600 
 {
 	width:400px !important; 
-}    
+}
+
+.team-member-avatar img {
+    height: 280px;
+}

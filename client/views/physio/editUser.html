@@ -29,7 +29,7 @@
         <label for="inputPassword3" class="col-sm-2 control-label">Course</label>
         <div class="col-sm-10">
           <div class="img-select">
-            <div class="col-xs-12"><input type="checkbox"></input><img src="assets/images/girl.png" /></div>
+            <div class="col-xs-12" ng-repeat="course in courses"><input type="checkbox"></input><img ng-src={{course.image}} /></div>
           </div>
         </div>
       </div>

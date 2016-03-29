@@ -7,6 +7,8 @@ app.controller('physioCustomersController', ['$scope', 'userService', '$location
  			console.log("dtls", dtls);
  			$state.go("physioCustomerDtls" , {userId : dtls.id});
  		};
+ 		$scope.courses = commonData.courses;
+ 		console.log("courses", $scope.courses);
  		$scope.editUsrDtls = function() {
  			var customerDtls = commonData.customers;
  			var userId = $state.params.userId;

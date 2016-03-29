@@ -63,11 +63,11 @@ app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider','$loca
             controller : 'physioCustomersController',
             templateUrl : 'views/physio/editUser.html'
         })
-        .state('profile', {
-    		url : '/profile',
-    		controller : 'profileController',
-    		templateUrl : 'views/profile.html'
-    	})
+        //.state('profile', {
+    	// 	url : '/profile',
+    	// 	controller : 'profileController',
+    	// 	templateUrl : 'views/profile.html'
+    	// })
         .state('createUser', {
             url : '/createUser',
             controller : 'createUserController',
@@ -76,4 +76,6 @@ app.config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider','$loca
         // $locationProvider.html5Mode({
         //     enabled: true
         // });
+
+      
 }]); 

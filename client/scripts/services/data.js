@@ -58,7 +58,7 @@ app.service('commonData', function() {
         {
             "id" : 1,
             "courseId" : 1,
-            "slide" : "../assets/images/session/1.jpg",
+            "slide" : "../assets/images/session/8.jpg",
             "therapistId" : 1,
             "feedbackNeeded" : false
         },
