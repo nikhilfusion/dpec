@@ -5,9 +5,9 @@
             <h1>My Videos</h1>
         </div>
         <div ng-repeat="course in courses" class="course-wrap">
-            <div class="col-md-4 col-sm-4 col-xs-6">
-                <div class="thumbnail">
-                    <img class="img-responsive" ng-src="{{course.image}}" >
+            <div class="col-md-4 col-sm-4 col-xs-6" >
+                <div class="thumbnail" ui-sref="showCourse({courseId: course.courseId})">
+                    <img class="img-responsive" ng-src="{{course.image}}" style="cursor:pointer;">
                 </div>
             </div>
         </div>   
