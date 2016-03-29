@@ -2,38 +2,38 @@ app.service('commonData', function() {
     this.courses = [
         {
         	"courseId" : 1,
-        	"name" : "course1",
-        	"image": "../assets/images/course/1.jpg",
+        	"name" : "MRSA information",
+        	"image": "../assets/images/course/7.jpg",
         	"therapistId" : 1 
         },
         {
         	"courseId" : 2,
-        	"name" : "course2",
-        	"image": "../assets/images/course/2.jpg",
+        	"name" : "Hand Hygiene information",
+        	"image": "../assets/images/course/8.jpg",
         	"therapistId" : 2 
         },
         {
         	"courseId" : 3,
-        	"name" : "course3",
-        	image: "../assets/images/course/3.jpg",
+        	"name" : "Atrial Fibrillaiton",
+        	image: "../assets/images/course/9.png",
         	"therapistId" : 3
         },
         {
         	"courseId" : 4,
-        	"name" : "course4",
-        	"image": "../assets/images/course/4.jpg",
+        	"name" : "Warfarin Therapy",
+        	"image": "../assets/images/course/10.jpg",
         	"therapistId" : 1 
         },
         {
         	"courseId" : 5,
-        	"name" : "course5",
-        	"image": "../assets/images/course/5.jpg",
+        	"name" : "Healthy Heart",
+        	"image": "../assets/images/course/11.jpg",
         	"therapistId" : 3 
         },
         {
         	"courseId" : 6,
-        	"name" : "course6",
-        	"image": "../assets/images/course/6.jpg",
+        	"name" : "Diabetic Food Guide",
+        	"image": "../assets/images/course/12.jpg",
         	"therapistId" : 2
         }
     ],
@@ -58,14 +58,14 @@ app.service('commonData', function() {
         {
             "id" : 1,
             "courseId" : 1,
-            "slide" : "../assets/images/session/8.jpg",
+            "slide" : "../assets/images/session/1.jpg",
             "therapistId" : 1,
             "feedbackNeeded" : false
         },
         {
             "id" : 2,
             "courseId" : 1,
-            "slide" : "../assets/images/session/9.jpg",
+            "slide" : "../assets/images/session/2.jpg",
             "therapistId" : 1,
             "feedbackNeeded" : false
         },
