@@ -58,14 +58,14 @@ app.service('commonData', function() {
         {
             "id" : 1,
             "courseId" : 1,
-            "slide" : "../assets/images/session/1.jpg",
+            "slide" : "../assets/images/session/8.jpg",
             "therapistId" : 1,
             "feedbackNeeded" : false
         },
         {
             "id" : 2,
             "courseId" : 1,
-            "slide" : "../assets/images/session/2.jpg",
+            "slide" : "../assets/images/session/9.jpg",
             "therapistId" : 1,
             "feedbackNeeded" : false
         },
