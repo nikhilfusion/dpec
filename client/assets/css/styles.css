@@ -199,4 +199,8 @@ a {
 .header-title {
     color: white;
     margin-top: 14px;
-};    
+}
+
+.modal-content {
+	margin-top:50%;  
+}
