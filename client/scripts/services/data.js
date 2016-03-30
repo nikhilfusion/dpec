@@ -58,35 +58,35 @@ app.service('commonData', function() {
         {
             "id" : 1,
             "courseId" : 1,
-            "slide" : "../assets/images/session/what.jpg",
+            "slide" : "../assets/images/session/1.png",
             "therapistId" : 1,
             "feedbackNeeded" : false
         },
         {
             "id" : 2,
             "courseId" : 1,
-            "slide" : "../assets/images/session/9.jpg",
+            "slide" : "../assets/images/session/2.png",
             "therapistId" : 1,
             "feedbackNeeded" : false
         },
         {
             "id" : 3,
             "courseId" : 1,
-            "slide" : "../assets/images/session/3.jpg",
+            "slide" : "../assets/images/session/3.png",
             "therapistId" : 1,
             "feedbackNeeded" : true
         },
         {
             "id" : 4,
             "courseId" : 1,
-            "slide" : "../assets/images/session/4.jpg",
+            "slide" : "../assets/images/session/4.png",
             "therapistId" : 1,
             "feedbackNeeded" : false
         },
         {
             "id" : 5,
             "courseId" : 1,
-            "slide" : "../assets/images/session/5.jpg",
+            "slide" : "../assets/images/session/5.png",
             "therapistId" : 1,
             "feedbackNeeded" : true
         },

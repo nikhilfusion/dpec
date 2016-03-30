@@ -188,6 +188,10 @@ a {
 	width:400px !important; 
 }
 
+.modal-backdrop {
+	opacity: 1 !important;
+}
+
 .team-member-avatar img {
     height: 280px;
 }
